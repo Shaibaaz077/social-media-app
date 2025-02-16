@@ -1,4 +1,5 @@
-import { createContext, useReducer } from "react";
+import { useReducer, createContext } from "react";
+import PropTypes from 'prop-types';
 
 export const PostsList = createContext({
     postList: [],
@@ -68,6 +69,14 @@ const PostListProvider = ({ children }) => {
     );
 };
 
+PostListProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+};
+
+
+PostListProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 
 export default PostListProvider;
